@@ -30,10 +30,17 @@ document.querySelector('.buttons').onclick = (event) => {
     const key = event.target.textContent;
 
     //esli nagata klavischa 0-9 ili .
-    if(digit.includes(key)) {
+    if (digit.includes(key)) {
         a += key;
         console.log(a, b , sign);
         out.textContent = a;
+    }
+
+    if (action.includes(key)) {
+        sign = key;
+       out.textContent = sign;
+       console.log(a, b, sign);
+       return; 
     }
 
 }
