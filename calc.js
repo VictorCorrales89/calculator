@@ -31,9 +31,18 @@ document.querySelector('.buttons').onclick = (event) => {
 
     //esli nagata klavischa 0-9 ili .
     if (digit.includes(key)) {
-        a += key;
-        console.log(a, b , sign);
-        out.textContent = a;
+        if(b ==='' && sign === ''){
+            a += key;
+            console.log(a, b , sign);
+            out.textContent = a;
+        }
+        else if (a!=='' && b!=='' && finish){
+
+        }
+        else {
+            b += key;
+        }
+        
     }
 
     if (action.includes(key)) {
